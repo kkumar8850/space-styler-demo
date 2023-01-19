@@ -1,0 +1,9 @@
+.active{
+    border : 2px solid #22A39F;
+    border-radius: 20px;
+}
+
+.nav{
+    border : 2px solid inherit;
+    border-radius: 20px;
+}
