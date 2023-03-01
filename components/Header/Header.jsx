@@ -1,34 +1,47 @@
+'use client'
+
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import styles from '../../styles/Header.module.css'
 import { useTheme } from 'next-themes'
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const list = [
     {
-        id : 'Home',
-        link : '',
-        subname :'home'
+        href:'/',
+        name : 'Home',
     },
     {
-        id : 'About Us',
-        link : 'about-us',
-        subname : 'about-us',
+        href : '/about-us',
+        name : 'About Us',
     },
     {
-        id : 'Contact Us',
-        link : 'contact-us',
-        subname : 'contact-us'
+        href : '/showcase',
+        name : 'Gallery'
     },
     {
-        id : 'Our Services',
-        link : 'our-services',
-        subname : 'our-services'
-    }
+        href:'/our-services',
+        name : 'Services'
+    },
+    {
+        href:'/modular-kitchen',
+        name : 'Modular Kitchen'
+    },
+    {
+        href:'/furniture',
+        name : 'Furniture'
+    },
+    {
+        href : '/contact-us',
+        name : 'Contact Us'
+    },
 ]
 
 function Header({ active }) {
+    const path = usePathname()
     const {theme, setTheme} = useTheme()
     const [open, setOpen] = useState(false)
 
@@ -50,10 +63,16 @@ function Header({ active }) {
                         <ul className='hidden lg:block xl:block md:block'>
                             {
                                 list.map(l=> (
-                                    <li className='inline-block text-sm ml-6' key={l.id}>
-                                        <Link href={`/${l.link}`} className={`text-secondary px-6 py-1  ${active === l.subname ? styles.active : styles.nav}`}>
-                                        {l.id}
-                                        </Link>
+                                    <li className='inline-block text-sm ml-6' key={l.name}>
+                                        <motion.div
+                                            whileHover={{
+                                                scale : 1.1
+                                            }}
+                                        >
+                                            <Link href={l.href} className={`text-secondary px-6 py-1   ${path === l.href ? styles.active : styles.nav}`}>
+                                                {l.name}
+                                            </Link>
+                                        </motion.div>
                                     </li>
                                 ))
                             }
@@ -76,23 +95,23 @@ function Header({ active }) {
                         </button>
                     </div>
                 </div>
-                {
-                    open && (
-                        <div className='h-[100vh] bg-secondary fixed z-[9999]'>
-                            <ul className='text-center m-0 p-0'>
-                                {
-                                    list.map(l=> (
-                                        <Link href={`/${l.link}`} key={l.id} className={`text-primary  ${active === l.subname ? styles.active : styles.nav}`}>
-                                            <li className='inline-block text-3xl font-semibold w-[100%] p-4 hover:bg-primary hover:text-secondary' >
-                                                {l.id}
-                                            </li>
-                                        </Link>
-                                    ))
-                                }
-                            </ul>
-                        </div>
-                    )
-                }
+                
+                <motion.div className={`${open ? 'block' : 'hidden'} h-[100vh] bg-secondary fixed z-[9999]`} initial={{opacity : 0, y : -100}}
+                    animate={{opacity : 1, y : 0}}
+                    exit={{opacity : 0, y : -100}}
+                >
+                    <ul className='text-center m-0 p-0'>
+                        {
+                            list.map(l=> (
+                                <Link href={l.href} key={l.name} className={`text-primary  ${path === l.href ? styles.active : styles.nav}`}>
+                                    <li className='inline-block text-3xl font-semibold w-[100%] p-4 hover:bg-primary hover:text-secondary' >
+                                        {l.name}
+                                    </li>
+                                </Link>
+                            ))
+                        }
+                    </ul>
+                </motion.div>
             </div>
             <div className='h-[90px]' />
         </div>

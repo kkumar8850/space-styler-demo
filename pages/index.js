@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Header from '@/components/Header/Header'
-import Banner from '@/components/Banner/Banner'
 import OurServices from '@/components/Homepage/OurServices'
 import WhyChooseUs from '@/components/Homepage/WhyChooseUs'
 import Footer from '@/components/Footer'
+import PageWrapper from '@/components/PageWrapper/PageWrapper'
+import IntroVideo from '@/components/Homepage/IntroVideo'
 
 export default function Home() {
   return (
@@ -16,8 +17,10 @@ export default function Home() {
       </Head>
       <main>
         <Header active="home"/>
-        <Banner h={500}/>
+        <IntroVideo />
+        <PageWrapper>
         <OurServices />
+        </PageWrapper>
         <WhyChooseUs />
       </main>
       <Footer />

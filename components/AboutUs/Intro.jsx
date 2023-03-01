@@ -1,22 +1,41 @@
 import React from 'react'
 import Image from 'next/image'
 import IntroTop from '../../public/Images/intro.jpg'
+import ProjectImage from '../../public/Images/project.jpg'
+import styles from '../../styles/aboutus.module.css'
 
 function Intro() {
   return (
-    <div className='container text-center'>
-        <p className='text-center text-secondary text-3xl font-semibold mb-4'>Who we are ?</p>
-        <div className='lg:h-[400px] xs:h-[200px] sm:h-[200px] overflow-hidden'>
-            <Image
-                src={IntroTop}
-                alt="intro-image"
+    <div className='container'>
+      <p className='text-center text-secondary text-3xl font-semibold lg:mb-[30px] xs:mb-[20px]'>Who we are ?</p>
+      <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
+        <div className='w-full sm:w-[90%] block lg:hidden sm:block'>
+          <Image
+            src={IntroTop}
+            alt="intro-image"
+            className='rounded-lg'
             />
         </div>
-        <p className='text-center font-semibold text-2xl mt-[30px]'>What is SpaceStyler?</p>
-        <p className='my-[20px]'>Founded in 2012, LuxDeco is the leading global interior marketplace that is changing the way people design and shop for their homes.</p>
-        <p className='my-[20px]'>SpaceStyler offers global clientele unparalleled access to thousands of products from 200+ of the world’s finest interior brands, including AERIN, Kelly Wearstler, L’Objet, Michael Aram, Missoni Home, and Ralph Lauren; a unique, vast range in one curated location.</p>
-        <p className='my-[20px]'>Alongside a team of experts offering support and design advice from the first click through to white-glove delivery and installation, LuxDeco also provides an interior design studio service with expertise ranging from full-service residential and hospitality projects to product sourcing and bespoke furniture design, using best-in-class digital technology and industry tools.</p>
-        <p className='my-[20px]'>Inspirational lifestyle content, including podcasts, playlists, styling advice and trend features are published daily by SpaceStyler team experts, alongside curated edits from the biggest names in design. To date, SpaceStyler has delivered over 100,000 products to clients in 80 countries, redefining the luxury interior design experience and helping people around the world to live beautifully.</p>
+        <div>
+          <p className='text-lg mb-[20px] lg:w-[90%] xs:w-full text-[#000] dark:text-[#ccc]'><span className='text-xl text-secondary font-bold'>Space styler</span> is one of the leading interior design company well known for its ability to create calm balanced refined interiors. 
+          </p>
+          <p className='text-lg mb-[20px] text-[#000] dark:text-[#ccc]'>Weather it’s a residential or commercial project, getting to know clients, understanding their needs and preferences, winning their trust and collaborating with them is at the heart of space styler work.</p>
+          <p className='text-lg mb-[20px] lg:w-[90%] xs:w-full text-[#000] dark:text-[#ccc]'>Whilst our work delivers a modern interior design vibe we don’t forget to pay attention to functionality and comfort.</p>
+          <p className='text-lg mb-[20px] text-[#000] dark:text-[#ccc]'>We take the pride on our intelligent approach to interior space planning and designs. Our Aim is to create spaces that are worthy of today and embraced by tomorrow.</p>
+        </div>
+        <div className='w-full sm:w-[90%] hidden sm:hidden lg:block'>
+          <Image
+            src={IntroTop}
+            alt="intro-image"
+            className='rounded-lg'
+            />
+        </div>
+      </div>
+    <div className='my-[40px]'>
+      <blockquote className={styles.blockquote}>
+        <p>Central to everything we do is our close working relationship with our clients - We provide friendly guidance and a comprehensive design service to help bring their ideas to life.</p>
+      </blockquote>
+    </div>
     </div>
   )
 }

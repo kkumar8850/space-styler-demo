@@ -7,5 +7,41 @@ html {
     margin : 0;
     padding : 0;
     scroll-behavior: smooth;
-    font-family : 'Poppins', sans-serif
+    font-family : 'Satisfy', sans-serif
+}
+
+.owl-stage-outer, .owl-stage, .owl-item {
+    height : inherit
+}
+
+.owl-prev {
+    height: 40px !important;
+    width: 40px !important;
+    padding : 14px !important;
+    font-size : 40px !important;
+    line-height : 14px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    left : -60px;
+    bottom : 150px;
+    border : 2px solid #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.owl-next {
+    height: 40px !important;
+    width: 40px !important;
+    padding : 14px !important;
+    font-size : 40px !important;
+    line-height : 14px !important;
+    border-radius: 50% !important;
+    position: absolute;
+    right : -60px;
+    bottom : 150px;
+    border : 2px solid #fff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

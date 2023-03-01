@@ -1,0 +1,21 @@
+.blockquote {
+    color: rgba(250, 200, 130);
+    font-size: 30px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.blockquote p::before,
+.blockquote p::after {
+   content: "“";
+   font-family: Georgia;
+   font-size: 8rem;
+   margin: -2rem 0 0 -4rem;
+   position: absolute;
+   opacity: 0.5;
+}
+
+.blockquote p::after {
+   content: "”";
+   margin: -1rem -4rem 0 0;
+}
