@@ -20,7 +20,7 @@ const list = [
         name : 'About Us',
     },
     {
-        href : '/showcase',
+        href : '/gallery',
         name : 'Gallery'
     },
     {
@@ -81,9 +81,9 @@ function Header({ active }) {
                         {
                             isActive
                             ?
-                            <FaTimes className='sm:block xs:block lg:hidden xl:hidden md:hidden' onClick={handleToggle}/>
+                            <FaTimes className='sm:block xs:block lg:hidden xl:hidden md:hidden text-2xl cursor-pointer' onClick={handleToggle}/>
                             :
-                            <FaBars className='sm:block xs:block lg:hidden xl:hidden md:hidden' onClick={handleToggle} />
+                            <FaBars className='sm:block xs:block lg:hidden xl:hidden md:hidden text-2xl cursor-pointer' onClick={handleToggle} />
                         }
                         {/* <button id="theme-toggle" type="button" onClick={()=> setTheme(theme === 'light' ? 'dark' : 'light')} className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ml-10">
                             {
