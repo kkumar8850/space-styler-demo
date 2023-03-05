@@ -1,6 +1,8 @@
 .active{
     border : 2px solid #22A39F;
+    background-color : #22A39F;
     border-radius: 20px;
+    color : #000;
 }
 
 .nav{

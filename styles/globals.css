@@ -15,33 +15,42 @@ html {
 }
 
 .owl-prev {
-    height: 40px !important;
-    width: 40px !important;
+    height: 100% !important;
+    width: 80px !important;
     padding : 14px !important;
     font-size : 40px !important;
     line-height : 14px !important;
-    border-radius: 50% !important;
+    transition : 1s;
     position: absolute;
-    left : -60px;
-    bottom : 150px;
-    border : 2px solid #fff !important;
+    bottom : 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.owl-prev span{
+    color : #000;
+}
+.owl-prev:hover {
+    background-image : linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)) !important;
+}
 
 .owl-next {
-    height: 40px !important;
-    width: 40px !important;
+    height: 100% !important;
+    width: 80px !important;
     padding : 14px !important;
     font-size : 40px !important;
     line-height : 14px !important;
-    border-radius: 50% !important;
+    transition : 1s;
     position: absolute;
-    right : -60px;
-    bottom : 150px;
-    border : 2px solid #fff !important;
+    bottom : 0;
+    right : 0;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.owl-next span{
+    color : #000;
+}
+.owl-next:hover {
+    background-image : linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)) !important;
 }

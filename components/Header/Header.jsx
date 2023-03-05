@@ -8,6 +8,7 @@ import styles from '../../styles/Header.module.css'
 import { useTheme } from 'next-themes'
 import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import SideMenu from './SideMenu'
 
 const list = [
     {
@@ -43,10 +44,10 @@ const list = [
 function Header({ active }) {
     const path = usePathname()
     const {theme, setTheme} = useTheme()
-    const [open, setOpen] = useState(false)
+    const [isActive, setIsActive] = useState(false)
 
     const handleToggle = () => {
-        setOpen(!open)
+        setIsActive(!isActive)
     }
 
     return (
@@ -69,7 +70,7 @@ function Header({ active }) {
                                                 scale : 1.1
                                             }}
                                         >
-                                            <Link href={l.href} className={`text-secondary px-6 py-1   ${path === l.href ? styles.active : styles.nav}`}>
+                                            <Link href={l.href} className={`text-secondary px-6 py-1 ${path === l.href ? styles.active : styles.nav}`}>
                                                 {l.name}
                                             </Link>
                                         </motion.div>
@@ -78,13 +79,13 @@ function Header({ active }) {
                             }
                         </ul>
                         {
-                            open
+                            isActive
                             ?
                             <FaTimes className='sm:block xs:block lg:hidden xl:hidden md:hidden' onClick={handleToggle}/>
                             :
                             <FaBars className='sm:block xs:block lg:hidden xl:hidden md:hidden' onClick={handleToggle} />
                         }
-                        <button id="theme-toggle" type="button" onClick={()=> setTheme(theme === 'light' ? 'dark' : 'light')} className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ml-10">
+                        {/* <button id="theme-toggle" type="button" onClick={()=> setTheme(theme === 'light' ? 'dark' : 'light')} className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ml-10">
                             {
                                 theme === 'light'
                                 ?
@@ -92,13 +93,13 @@ function Header({ active }) {
                                 :
                                 <FaSun color='#fff' className='hover:cursor-pointer' />
                             }
-                        </button>
+                        </button> */}
                     </div>
                 </div>
-                
-                <motion.div className={`${open ? 'block' : 'hidden'} h-[100vh] bg-secondary fixed z-[9999]`} initial={{opacity : 0, y : -100}}
-                    animate={{opacity : 1, y : 0}}
-                    exit={{opacity : 0, y : -100}}
+                {/* <SideMenu data={list} active={isActive} setIsActive={setIsActive} handleToggle={handleToggle} /> */}
+                <motion.div className={`${isActive ? 'block' : 'hidden'} h-[100vh] bg-secondary fixed z-[9999]`} initial={{ y : -100}}
+                    animate={{ y : 0}}
+                    exit={{ y : -100}}
                 >
                     <ul className='text-center m-0 p-0'>
                         {
