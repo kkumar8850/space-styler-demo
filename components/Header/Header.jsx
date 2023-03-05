@@ -53,7 +53,7 @@ function Header({ active }) {
     return (
         <div>
             <div className='bg-white dark:bg-primary text-white py-4 fixed z-[999] w-[100%]'>
-                <div className='container flex items-center justify-between'>
+                <div className='px-[20px] flex items-center justify-between'>
                     <Image
                         src="/Images/logo.png"
                         height={100}
@@ -81,7 +81,7 @@ function Header({ active }) {
                         {
                             isActive
                             ?
-                            <FaTimes className='sm:block xs:block lg:hidden xl:hidden md:hidden text-2xl cursor-pointer' onClick={handleToggle}/>
+                            <FaTimes className='sm:block xs:block lg:hidden xl:hidden md:hidden text-2xl cursor-pointer ' onClick={handleToggle}/>
                             :
                             <FaBars className='sm:block xs:block lg:hidden xl:hidden md:hidden text-2xl cursor-pointer' onClick={handleToggle} />
                         }
