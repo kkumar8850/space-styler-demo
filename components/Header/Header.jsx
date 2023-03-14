@@ -55,7 +55,7 @@ function Header({ active }) {
             <div className='bg-white dark:bg-primary text-white py-4 fixed z-[999] w-[100%]'>
                 <div className='px-[20px] flex items-center justify-between'>
                     <Image
-                        src="/Images/logo.png"
+                        src="/Images/logonew.png"
                         height={100}
                         width={200}
                         alt='logo'

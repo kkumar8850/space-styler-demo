@@ -5,31 +5,31 @@ const kitchenType = [
         id : 0,
         name : 'U Shape',
         selectedId : 'u-shape',
-        imageId : 1
+        imageId : '/Images/u-shape.jpg'
     },
     {
         id : 1,
         name : 'L Shape',
         selectedId : 'l-shape',
-        imageId : 2
+        imageId : '/Images/l-shape.jpg'
     },
     {
         id : 2,
         name : 'Parallel',
         selectedId : 'parallel',
-        imageId : 1
+        imageId : '/Images/parallel.jpg'
     },
     {
         id : 3,
         name : 'Straight',
         selectedId : 'straight',
-        imageId : 2
+        imageId : '/Images/straight.jpg'
     },
     {
         id : 4,
         name : 'Island',
         selectedId : 'island',
-        imageId : 1
+        imageId : '/Images/island.jpeg'
     }
 ]
 
@@ -54,7 +54,7 @@ function KitchenType() {
         <div
             className='h-[70vh] '
             style={{
-                backgroundImage :  `url(/Images/${kitchenType.find(i=> i.selectedId === selected).imageId}.jpg)`,
+                backgroundImage :  `url(${kitchenType.find(i=> i.selectedId === selected).imageId})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition:'center',
                 backgroundSize : 'cover'

@@ -72,7 +72,7 @@ function OurServicesPage() {
                     </motion.div>
                 ))
             }
-            <AnimatePresence>
+            {/* <AnimatePresence>
                 {selectedId && (
                     <motion.div key="modal"         initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -82,7 +82,7 @@ function OurServicesPage() {
                     <motion.button onClick={() => setSelectedId(null)} />
                     </motion.div>
                 )}
-            </AnimatePresence>
+            </AnimatePresence> */}
         </div>
     </div>
   )
