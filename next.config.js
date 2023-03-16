@@ -2,7 +2,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  webpack: (config, options, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+  webpack: (config, { webpack }) => {
     config.plugins.push(
      new webpack.ProvidePlugin({
      $: "jquery",
