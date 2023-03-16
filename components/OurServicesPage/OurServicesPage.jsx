@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import renovationImage from '../../public/Images/renovation.jpeg'
 import spacePlanningImage from '../../public/Images/spacePlanning.jpeg'
 import DesignImage from '../../public/Images/2d_3d_design.jpg'
@@ -48,15 +48,12 @@ const arr = [
 ]
 
 function OurServicesPage() {
-    const [selectedId, setSelectedId] = useState(null)
   return (
     <div className='container py-10'>
         <div className='grid lg:grid-cols-3 xs:grid-cols-1 gap-6'>
             {
                 arr.map(i=> (
-                    <motion.div 
-                        layoutId={i.id} 
-                        onClick={() => setSelectedId(i.id)}
+                    <div 
                         className='bg-[#eaeaea] text-center p-[20px] rounded-sm ' key={i.id}>
                         <div 
                         
@@ -69,20 +66,9 @@ function OurServicesPage() {
                         </div>
                         <p className='text-[#333] text-2xl font-bold mb-4'>{i.heading}</p>
                         <p className='text-[#444] text-sm'>{i.subHeading}</p>
-                    </motion.div>
+                    </div>
                 ))
             }
-            {/* <AnimatePresence>
-                {selectedId && (
-                    <motion.div key="modal"         initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }} layoutId={selectedId}>
-                    <motion.h5>{arr[selectedId].heading}</motion.h5>
-                    <motion.h2>{arr[selectedId].subHeading}</motion.h2>
-                    <motion.button onClick={() => setSelectedId(null)} />
-                    </motion.div>
-                )}
-            </AnimatePresence> */}
         </div>
     </div>
   )

@@ -1,73 +1,61 @@
 import React from 'react'
-import Image from 'next/image'
-import Img from '../../../public/Images/why-choose-us.jpg'
 import {FaStudiovinari, FaRegLightbulb, FaDollarSign,FaPeopleCarry, FaPeopleArrows} from 'react-icons/fa'
+
+const contentArray = [
+    {
+        id : 0,
+        name : 'Creative Design', 
+        text : 'Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!',
+        icon : <FaStudiovinari color="#fff" fontSize={60} />
+    },
+    {
+        id : 1,
+        name : 'Fast Execution', 
+        text : 'Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!',
+        icon : <FaRegLightbulb color="#fff" fontSize={80}/>
+    },
+    {
+        id : 2,
+        name : 'We never exceed your budge', 
+        text : 'Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!',
+        icon : <FaDollarSign color="#fff" fontSize={80}/>
+    },
+    {
+        id : 3,
+        name : 'Inhouse design and execution team', 
+        text : 'Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!',
+        icon : <FaPeopleCarry color="#fff" fontSize={80}/>
+    },
+    {
+        id : 4,
+        name : 'Start to finish we handle it all', 
+        text : 'Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!',
+        icon : <FaPeopleArrows color="#fff" fontSize={80}/>
+    },
+]
 
 function WhyChooseUs() {
   return (
     <div className='container py-[50px]'>
-        <div className='grid lg:grid-cols-2 gap-8 xs:grid-col-1'>
-            <div className=' mx-auto'>
-              <p className='text-secondary text-2xl text-left mb-2'>Why Choose Us</p>
-              <p className='mb-6'>Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!</p>
-                <div className='grid lg:grid-cols-2 gap-8 xs:grid-col-1'>
-                    <div>
-                        <div className='bg-secondary h-[50px] w-[50px] rounded-sm flex items-center justify-center'>
-                            <FaStudiovinari size={30}/>
+        <p className='text-secondary text-3xl font-semibold text-center mb-2'>Why Choose Us</p>
+        <p className='mb-6 text-center text-xl'>Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!</p>
+        <div className='grid lg:grid-cols-3 xs:grid-cols-1 gap-6'>
+            {
+                contentArray.map(i=> (
+                    <div 
+                        className='bg-[#eaeaea] text-center p-[20px] rounded-sm ' key={i.id}>
+                        <div 
+                            className='h-[200px] mb-4 flex justify-center items-center bg-secondary'
+                        >
+                            {i.icon}
                         </div>
-                        <p className='text-xl my-2'>Creative Design</p>
-                        <p className='font-light text-sm'>
-                        Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!
-                        </p>
+                        <p className='text-[#333] text-2xl font-bold mb-4'>{i.name}</p>
+                        <p className='text-[#444] text-sm'>{i.text}</p>
                     </div>
-                    <div>
-                        <div className='bg-secondary h-[50px] w-[50px] rounded-sm flex items-center justify-center'>
-                            <FaRegLightbulb size={30}/>
-                        </div>
-                        <p className='text-xl my-2'>Fast Execution</p>
-                        <p className='font-light text-sm'>
-                        Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!
-                        </p>
-                    </div>
-                    <div>
-                        <div className='bg-secondary h-[50px] w-[50px] rounded-sm flex items-center justify-center'>
-                            <FaDollarSign size={30}/>
-                        </div>
-                        <p className='text-xl my-2'>We never exceed your budget</p>
-                        <p className='font-light text-sm'>
-                        Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!
-                        </p>
-                    </div>
-                    <div>
-                        <div className='bg-secondary h-[50px] w-[50px] rounded-sm flex items-center justify-center'>
-                            <FaPeopleArrows size={30}/>
-                        </div>
-                        <p className='text-xl my-2'>Inhouse design and execution team</p>
-                        <p className='font-light text-sm'>
-                        Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!
-                        </p>
-                    </div>
-                    <div>
-                        <div className='bg-secondary h-[50px] w-[50px] rounded-sm flex items-center justify-center'>
-                            <FaPeopleCarry size={30}/>
-                        </div>
-                        <p className='text-xl my-2'>Start to finish we handle it all</p>
-                        <p className='font-light text-sm'>
-                        Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <div className='w-[90%] mx-auto mt-10 shadow-inner rounded-sm overflow-hidden shadow-secondary'>
-                    <Image
-                        alt="design"
-                        src={Img}
-                        placeholder="blur"
-                    />
-                </div>
-            </div>
+                ))
+            }
         </div>
+        
     </div>
   )
 }

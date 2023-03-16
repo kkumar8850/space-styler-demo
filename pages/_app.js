@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
       }
       </style>
       <ErrorBoundary>
-        <ThemeProvider attribute='class'>
+        <ThemeProvider attribute='class' enableSystem={false} >
           <AnimatePresence mode="wait" initial={false}>
             <Component {...pageProps} />
           </AnimatePresence>

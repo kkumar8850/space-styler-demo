@@ -1,8 +1,8 @@
 import Intro from '@/components/AboutUs/Intro'
-import Numbers from '@/components/AboutUs/Numbers'
-import OurServices from '@/components/AboutUs/OurServices'
-import Specialization from '@/components/AboutUs/specialization'
-import Team from '@/components/AboutUs/team'
+// import Numbers from '@/components/AboutUs/Numbers'
+// import OurServices from '@/components/AboutUs/OurServices'
+// import Specialization from '@/components/AboutUs/specialization'
+// import Team from '@/components/AboutUs/team'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header/Header'
 import PageWrapper from '@/components/PageWrapper/PageWrapper'
@@ -17,13 +17,10 @@ function AboutUs() {
       </Head>
       <main>
         <Header active="about-us" />
-        <div className='pt-[30px]'>
+        <div className='pt-[10px]'>
           <PageWrapper>
             <Intro />
-            {/* <OurServices />
-            <Specialization />
-            <Numbers /> */}
-            <Team />
+            {/* <Team /> */}
           </PageWrapper>
         </div>
       </main>

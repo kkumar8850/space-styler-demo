@@ -98,7 +98,7 @@ function ContactUs() {
                               <input
                                 type="text"
                                 name="fullName"
-                                placeholder='Enter First Name'
+                                placeholder='Enter Full Name'
                                 className={styles.input}
                                 value={values.fullName}
                                 onChange={handleChange}

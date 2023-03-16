@@ -2,15 +2,15 @@
 
 const nextConfig = {
   reactStrictMode: true,
-//   webpack: (config, options, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-//     config.plugins.push(
-//      new webpack.ProvidePlugin({
-//      $: "jquery",
-//      jQuery: "jquery",
-//      "window.jQuery": "jquery",
-//   }))
-//   return config;
-// }
+  webpack: (config, options, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.plugins.push(
+     new webpack.ProvidePlugin({
+     $: "jquery",
+     jQuery: "jquery",
+     "window.jQuery": "jquery",
+  }))
+  return config;
+}
 }
 
 module.exports = nextConfig

@@ -5,8 +5,12 @@ import WhyChooseUs from '@/components/Homepage/WhyChooseUs'
 import Footer from '@/components/Footer'
 import PageWrapper from '@/components/PageWrapper/PageWrapper'
 import IntroVideo from '@/components/Homepage/IntroVideo'
+import AboutUs from '@/components/Homepage/Aboutus'
+import Testimonials from '@/components/Homepage/Testimonials/Testimonials'
+import Specialization from '@/components/Homepage/Specialization/Specialization'
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -19,9 +23,12 @@ export default function Home() {
         <Header active="home"/>
         <IntroVideo />
         <PageWrapper>
+        <AboutUs />
         <OurServices />
         </PageWrapper>
         <WhyChooseUs />
+        <Specialization />
+        <Testimonials />
       </main>
       <Footer />
     </>

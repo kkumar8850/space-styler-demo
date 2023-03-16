@@ -60,14 +60,11 @@ function KitchenType() {
                 backgroundSize : 'cover'
             }}
         >
-            <div className='bg-primary bg-opacity-50 flex items-center h-[inherit]'>
-                <div className='container'>
-                    <h1 className='text-3xl font-semibold mb-[20px]'>
-                        {kitchenType.find(i=> i.selectedId === selected).name}
+            <div className='h-[inherit]'>
+                <div className='container relative'>
+                    <h1 className='text-3xl font-semibold mb-[20px] absolute top-[20px] text-primary'>
+                        {kitchenType.find(i=> i.selectedId === selected).name} Kitchen
                     </h1>
-                    <p className='text-xl'>
-                    Alongside a team of experts offering support and design advice from the first click through to white-glove delivery and installation, LuxDeco also provides an interior design studio service with expertise ranging from full-service residential and hospitality projects to product sourcing and bespoke furniture design, using best-in-class digital technology and industry tools.
-                    </p>
                 </div>
             </div>
         </div>

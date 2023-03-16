@@ -1,14 +1,13 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import styles from '../../styles/Header.module.css'
-import { useTheme } from 'next-themes'
-import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import SideMenu from './SideMenu'
+import { useTheme } from 'next-themes'
 
 const list = [
     {
@@ -24,10 +23,6 @@ const list = [
         name : 'Gallery'
     },
     {
-        href:'/our-services',
-        name : 'Services'
-    },
-    {
         href:'/modular-kitchen',
         name : 'Modular Kitchen'
     },
@@ -41,18 +36,25 @@ const list = [
     },
 ]
 
-function Header({ active }) {
+function Header() {
     const path = usePathname()
-    const {theme, setTheme} = useTheme()
     const [isActive, setIsActive] = useState(false)
-
+    const {theme, setTheme} = useTheme('dark')
     const handleToggle = () => {
         setIsActive(!isActive)
     }
 
+    const toggleTheme = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark')
+    }
+
+    useEffect(()=>{
+        setTheme('dark')
+    },[])
+
     return (
         <div>
-            <div className='bg-white dark:bg-primary text-white py-4 fixed z-[999] w-[100%]'>
+            <div className='container bg-primary text-white py-4 fixed z-[999] w-[100%]'>
                 <div className='px-[20px] flex items-center justify-between'>
                     <Image
                         src="/Images/logonew.png"
@@ -77,6 +79,9 @@ function Header({ active }) {
                                     </li>
                                 ))
                             }
+                            <li className='hidden'>
+                                <button onClick={toggleTheme}>toggle</button>
+                            </li>
                         </ul>
                         {
                             isActive
@@ -85,18 +90,8 @@ function Header({ active }) {
                             :
                             <FaBars className='sm:block xs:block lg:hidden xl:hidden md:hidden text-2xl cursor-pointer' onClick={handleToggle} />
                         }
-                        {/* <button id="theme-toggle" type="button" onClick={()=> setTheme(theme === 'light' ? 'dark' : 'light')} className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 ml-10">
-                            {
-                                theme === 'light'
-                                ?
-                                <FaMoon color="#000" className='hover:cursor-pointer' />
-                                :
-                                <FaSun color='#fff' className='hover:cursor-pointer' />
-                            }
-                        </button> */}
                     </div>
                 </div>
-                {/* <SideMenu data={list} active={isActive} setIsActive={setIsActive} handleToggle={handleToggle} /> */}
                 <motion.div className={`${isActive ? 'block' : 'hidden'} h-[100vh] bg-secondary fixed z-[9999]`} initial={{ y : -100}}
                     animate={{ y : 0}}
                     exit={{ y : -100}}

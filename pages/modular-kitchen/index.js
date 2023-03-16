@@ -12,7 +12,7 @@ function ModularKitchen() {
         <Header/>
         <div className='py-[20px]'>
             <h1 
-                className='text-center text-secondary text-3xl font-semibold mb-[20px]'>
+                className='text-center text-secondary text-3xl font-semibold my-[20px]'>
                     Modular Kitchen
             </h1>
             <div 
@@ -31,7 +31,7 @@ function ModularKitchen() {
             </p>
         </div>
         <KitchenType />
-        <KitchenFinishes />
+        {/* <KitchenFinishes /> */}
         <Footer />
     </div>
   )

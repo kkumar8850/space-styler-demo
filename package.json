@@ -23,6 +23,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "react-owl-carousel": "^2.3.3",
+    "react-responsive-carousel": "^3.2.23",
     "styled-components": "^5.3.8",
     "yup": "^0.32.11"
   },
