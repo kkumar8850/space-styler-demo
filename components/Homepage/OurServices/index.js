@@ -8,24 +8,25 @@ import projectManagementImage from '../../../public/Images/projectManagement.jpe
 import turnkeyImage from '../../../public/Images/turnkey.jpeg'
 
 const arr = [
+  
   {
       id : 0,
-      heading : 'Renovation',
-      img : renovationImage,
-      subHeading : 'Our space planning ensures that our designs adhere to the room’s purpose, functional requirements and layout. We revitalize your property’s character by optimizing the use of available space and creating new spaces.'
-  },
-  {
-      id : 1,
       heading : 'Space Planning',
       img : spacePlanningImage,
       subHeading : 'While our 2D designer draft, draw and create technical drawings, our 3D designer gives the real feel highlighting every aspect of you space.'
   },
   {
-      id : 2,
+      id : 1,
       heading : '2D-3D Design',
       img : DesignImage,
       subHeading : 'Our home renovation means working with some of what you have existing and completely transforming it into home you want. Our renovation ideas are implemented in a way that it upgrades the home functions, improves home value, provides comfort and enjoyment.'
   },
+  {
+        id : 2,
+        heading : 'Renovation',
+        img : renovationImage,
+        subHeading : 'Our space planning ensures that our designs adhere to the room’s purpose, functional requirements and layout. We revitalize your property’s character by optimizing the use of available space and creating new spaces.'
+    },
   {
       id : 4,
       heading : 'Construction',
