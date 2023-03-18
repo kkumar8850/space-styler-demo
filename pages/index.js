@@ -8,6 +8,8 @@ import IntroVideo from '@/components/Homepage/IntroVideo'
 import AboutUs from '@/components/Homepage/Aboutus'
 import Testimonials from '@/components/Homepage/Testimonials/Testimonials'
 import Specialization from '@/components/Homepage/Specialization/Specialization'
+import Image from 'next/image'
+import whatsppImage from '@/public/Images/whatsapp_icon.png'
 
 export default function Home() {
   
@@ -19,7 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
+      <main style={{position : 'relative'}}>
         <Header active="home"/>
         <IntroVideo />
         <PageWrapper>
@@ -29,6 +31,15 @@ export default function Home() {
         <WhyChooseUs />
         <Specialization />
         <Testimonials />
+        <div style={{position : 'fixed', top: '85vh', zIndex : 888, left : '50px'}}>
+          <a href="https://api.whatsapp.com/send/?phone=7778885464&text=Hi%2C+I+need+an+interior+designer.&type=phone_number&app_absent=0" target="_blank">
+            <Image
+              src={whatsppImage}
+              height={50}
+              width={50}          
+              />
+          </a>
+        </div>
       </main>
       <Footer />
     </>

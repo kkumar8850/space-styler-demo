@@ -44,10 +44,6 @@ function Header() {
         setIsActive(!isActive)
     }
 
-    const toggleTheme = () => {
-        setTheme(theme === 'dark' ? 'light' : 'dark')
-    }
-
     useEffect(()=>{
         setTheme('dark')
     },[])
@@ -79,9 +75,6 @@ function Header() {
                                     </li>
                                 ))
                             }
-                            <li className='hidden'>
-                                <button onClick={toggleTheme}>toggle</button>
-                            </li>
                         </ul>
                         {
                             isActive

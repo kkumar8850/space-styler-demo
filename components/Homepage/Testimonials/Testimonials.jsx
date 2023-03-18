@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 import dynamic from 'next/dynamic'
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
+// import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 import Image1 from '@/public/Images/image-tanya.jpg'
 import Image2 from '@/public/Images/image-john.jpg'
-import { Carousel } from 'react-responsive-carousel';
 import quoteImage from '@/public/Images/pattern-quotes.svg'
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
