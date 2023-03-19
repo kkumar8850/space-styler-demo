@@ -2,10 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import Image1 from '../../public/Images/1.jpg'
-import Image2 from '../../public/Images/slider-1.jpg'
+import Image2 from '../../public/Images/slider_2.jpg'
 import Image3 from '../../public/Images/bedroom_slider_2.jpg'
-import Image4 from '../../public/Images/drawing_room.jpg'
-import Image5 from '../../public/Images/living_room_slider.jpg'
+import Image4 from '../../public/Images/slider_4.jpg'
+import Image5 from '../../public/Images/slider-1.jpg'
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
