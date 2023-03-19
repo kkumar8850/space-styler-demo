@@ -45,7 +45,7 @@ function WhyChooseUs() {
                         >
                             {i.icon}
                         </div>
-                        <p className='text-[#fff] text-2xl font-bold mb-4'>{i.name}</p>
+                        <p className='text-[#fff] text-2xl mb-4'>{i.name}</p>
                     </div>
                 ))
             }

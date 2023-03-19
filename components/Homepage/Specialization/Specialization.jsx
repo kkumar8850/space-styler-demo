@@ -25,7 +25,7 @@ function Specialization() {
                                     fill
                                 />
                             </div>
-                            <p className='text-[#333] text-2xl font-bold my-4'>Bed</p>
+                            <p className='text-[#333] text-2xl font-bold my-4'>Modular Kitchen</p>
                             <p className='text-[#444] text-sm'>industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
                         </div>
                         {/* <div className='text-center'>
@@ -52,7 +52,7 @@ function Specialization() {
                                     fill
                                 />
                             </div>
-                            <p className='text-[#333] text-2xl font-bold my-4'>Sofa</p>
+                            <p className='text-[#333] text-2xl font-bold my-4'>Furniture</p>
                             <p className='text-[#444] text-sm'>industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
                         </div>
                         {/* <div className='text-center'>

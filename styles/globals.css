@@ -10,6 +10,10 @@ html {
     font-family : 'Satisfy', sans-serif
 }
 
+.container {
+    max-width: 1560px;
+}
+
 .owl-stage-outer, .owl-stage, .owl-item {
     height : inherit
 }
