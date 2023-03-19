@@ -59,7 +59,7 @@ function Header() {
                         alt='logo'
                     />
                     <div className='flex items-center'>
-                        <ul className='hidden lg:block xl:block md:block'>
+                        <ul className='hidden lg:block xl:block md:hidden'>
                             {
                                 list.map(l=> (
                                     <li className='inline-block text-sm ml-6' key={l.name}>
@@ -79,17 +79,17 @@ function Header() {
                         {
                             isActive
                             ?
-                            <FaTimes className='sm:block xs:block lg:hidden xl:hidden md:hidden text-2xl cursor-pointer ' onClick={handleToggle}/>
+                            <FaTimes className='sm:block xs:block lg:hidden xl:hidden md:block text-2xl cursor-pointer ' onClick={handleToggle}/>
                             :
-                            <FaBars className='sm:block xs:block lg:hidden xl:hidden md:hidden text-2xl cursor-pointer' onClick={handleToggle} />
+                            <FaBars className='sm:block xs:block lg:hidden xl:hidden md:block text-2xl cursor-pointer' onClick={handleToggle} />
                         }
                     </div>
                 </div>
-                <motion.div className={`${isActive ? 'block' : 'hidden'} h-[100vh] bg-secondary fixed z-[9999]`} initial={{ y : -100}}
+                <motion.div className={`${isActive ? 'block' : 'hidden'} h-[100vh] top-[108px] left-0 bg-secondary fixed z-[9999]`} initial={{ y : -100}}
                     animate={{ y : 0}}
                     exit={{ y : -100}}
                 >
-                    <ul className='text-center m-0 p-0'>
+                    <ul className='text-left m-0 p-0'>
                         {
                             list.map(l=> (
                                 <Link href={l.href} key={l.name} className={`text-primary  ${path === l.href ? styles.active : styles.nav}`}>
@@ -102,7 +102,7 @@ function Header() {
                     </ul>
                 </motion.div>
             </div>
-            <div className='h-[90px]' />
+            <div className='h-[100px]' />
         </div>
     )
 }
