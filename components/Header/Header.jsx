@@ -89,7 +89,7 @@ function Header() {
                     animate={{ y : 0}}
                     exit={{ y : -100}}
                 >
-                    <ul className='text-left m-0 p-0'>
+                    <ul className='text-center m-0 p-0'>
                         {
                             list.map(l=> (
                                 <Link href={l.href} key={l.name} className={`text-primary  ${path === l.href ? styles.active : styles.nav}`}>
@@ -102,7 +102,7 @@ function Header() {
                     </ul>
                 </motion.div>
             </div>
-            <div className='h-[100px]' />
+            <div className='h-[110px]' />
         </div>
     )
 }

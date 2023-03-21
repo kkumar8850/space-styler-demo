@@ -17,7 +17,7 @@ function AboutUs() {
       </Head>
       <main>
         <Header active="about-us" />
-        <div className='pt-[10px]'>
+        <div>
           <PageWrapper>
             <Intro />
             {/* <Team /> */}

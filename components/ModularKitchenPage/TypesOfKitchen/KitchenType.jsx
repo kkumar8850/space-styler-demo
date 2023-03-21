@@ -17,7 +17,7 @@ const kitchenType = [
         id : 2,
         name : 'Parallel',
         selectedId : 'parallel',
-        imageId : '/Images/parallel.jpg'
+        imageId : '/Images/parallel_kitchen_2.jpg'
     },
     {
         id : 3,
