@@ -7,6 +7,7 @@ import Image4 from '@/public/Images/4.jpg'
 import Image5 from '@/public/Images/5.jpg'
 import Image6 from '@/public/Images/6.jpg'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const portfolio = [
   {
@@ -44,6 +45,9 @@ const portfolio = [
 function gallery() {
   return (
     <div>
+      <Head>
+        <title>Our Showcase</title>
+      </Head>
         <Header />
         <div className='container'>
           <h1 className='text-center uppercase mt-5 text-3xl'>Awesome Portfolio</h1>

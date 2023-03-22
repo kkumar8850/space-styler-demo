@@ -5,10 +5,14 @@ import Image2 from '../../public/Images/2.jpg'
 import KitchenType from '@/components/ModularKitchenPage/TypesOfKitchen/KitchenType'
 import KitchenFinishes from '@/components/ModularKitchenPage/KitchenFinishes/KitchenFinishes'
 import Footer from '@/components/Footer'
+import Head from 'next/head'
 
 function ModularKitchen() {
   return (
     <div>
+        <Head>
+            <title>Modular Kitchen</title>
+        </Head>
         <Header/>
         <div className='py-[20px]'>
             <h1 
