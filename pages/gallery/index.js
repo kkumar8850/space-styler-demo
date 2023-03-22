@@ -50,9 +50,9 @@ function gallery() {
           <div className='grid lg:grid-cols-3 xs:grid-cols-1 gap-6 mt-4'>
           {
             portfolio.map(i=> (
-              <a href={`/gallery/${i.name}`} className="hover:mt-[-20px] transition-[0.5s]">
+              <a href={`/gallery/${i.name}`} className="hover:mt-[-20px] transition-[0.5s]" key={i.id}>
                 <div 
-                    className='bg-[#eaeaea] text-center p-[20px] rounded-sm ' key={i.id}>
+                    className='bg-[#eaeaea] text-center p-[20px] rounded-sm ' >
                     <div>
                         <Image
                             src={i.img}
