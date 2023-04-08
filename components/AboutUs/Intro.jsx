@@ -8,7 +8,7 @@ function Intro() {
   return (
     <section>
       <div 
-        className='h-[500px]' 
+        className='h-[300px] lg:h-[500px]' 
         style={{
         backgroundImage : `url(/Images/1.jpg)`,
         backgroundRepeat: 'no-repeat',
@@ -17,7 +17,7 @@ function Intro() {
       }}
     >
         <div>
-            <div className='h-[500px] bg-[rgba(0,0,0,0.5)] container flex items-center justify-center'>
+            <div className='h-[300px] lg:h-[500px] bg-[rgba(0,0,0,0.5)] container flex items-center justify-center'>
               <div className='text-center flex items-center justify-center'>
                 <ul className='m-0 p-0'>
                   <li className='inline-block hover:text-secondary'>

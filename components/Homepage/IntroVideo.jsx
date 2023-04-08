@@ -56,7 +56,7 @@ function IntroVideo() {
 }
 
   return (
-    <div className='h-[600px]' >
+    <div className='h-[300px] lg:h-[600px] sm:h-[300px] xs:h-[300px]' >
       <OwlCarousel
           loop
           nav={false}
@@ -66,7 +66,7 @@ function IntroVideo() {
       >
         {
           arr.map(a=> (
-            <div className='item h-[600px]' key={a.id}>
+            <div className='item h-[300px] lg:h-[600px] sm:h-[300px] xs:h-[300px]' key={a.id}>
               <Image
                 src={a.image}
                 fill
