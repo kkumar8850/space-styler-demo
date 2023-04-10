@@ -1,10 +1,13 @@
 import Header from '@/components/Header/Header'
 import React from 'react'
-import Image1 from '@/public/Images/1.jpg'
-import Image2 from '@/public/Images/bedImage.jpg'
-import Image3 from '@/public/Images/bedroom_slider.jpg'
-import Image4 from '@/public/Images/drawing_room.jpg'
-import Image5 from '@/public/Images/living_room_slider.jpg'
+import Image1 from '@/public/Images/bed-images/image1.jpg'
+import Image2 from '@/public/Images/bed-images/image2.jpeg'
+import Image3 from '@/public/Images/bed-images/image3.jpeg'
+import Image4 from '@/public/Images/bed-images/image4.jpeg'
+import Image5 from '@/public/Images/bed-images/image5.jpeg'
+import Image6 from '@/public/Images/bed-images/image6.jpeg'
+import Image7 from '@/public/Images/bed-images/image7.jpg'
+import Image8 from '@/public/Images/bed-images/image8.jpg'
 import Image from 'next/image'
 
 const arr = [
@@ -36,7 +39,17 @@ const arr = [
     {
         id : 5,
         name : 'image1',
-        img : Image1
+        img : Image6
+    },
+    {
+        id : 6,
+        name : 'image1',
+        img : Image7
+    },
+    {
+        id : 7,
+        name : 'image1',
+        img : Image8
     },
 ]
 

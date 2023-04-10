@@ -27,17 +27,17 @@ const portfolio = [
   },
   {
     id : 3,
-    name : 'Kitchen',
+    name : 'Bath Room',
     img : Image4
   },
   {
     id : 4,
-    name : 'Bath Room',
+    name : 'Balcony/Terrace',
     img : Image5
   },
   {
     id : 5,
-    name : 'Balcony/Terrace',
+    name : 'Office Interior',
     img : Image6
   },
 ]
