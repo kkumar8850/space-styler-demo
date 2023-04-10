@@ -15,7 +15,7 @@ function Specialization() {
                     </div>
                     <a href='/furniture/bed' className='h-[100%]'>
                         <div 
-                            className='bg-[#eaeaea] text-center p-[20px] rounded-sm h-[100%]'>
+                            className='bg-[#eaeaea] text-center p-[20px] rounded-sm h-[100%] min-h-[400px]'>
                             <div
                                 className='h-[50%] bg-primary flex items-center justify-center relative'
                             >
@@ -42,7 +42,7 @@ function Specialization() {
                     </a>
                     <a href="/furniture/sofa">
                     <div 
-                            className='bg-[#eaeaea] text-center p-[20px] rounded-sm h-[100%]'>
+                            className='bg-[#eaeaea] text-center p-[20px] rounded-sm h-[100%] min-h-[400px]'>
                             <div
                                 className='h-[50%] bg-primary flex items-center justify-center relative'
                             >

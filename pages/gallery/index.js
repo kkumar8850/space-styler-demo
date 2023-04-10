@@ -58,7 +58,7 @@ function gallery() {
             transition={{ delay : 0.25}}
             className='container'>
             <h1 className='text-center uppercase my-5 text-3xl'>Awesome Portfolio</h1>
-            <div className='grid lg:grid-cols-3 xs:grid-cols-1 gap-6 my-4'>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-2 xs:grid-cols-1 gap-6 my-4'>
             {
               portfolio.map(i=> (
                 <a href={`/gallery/${i.name}`} className="hover:mt-[-20px] transition-[0.5s]" key={i.id}>
