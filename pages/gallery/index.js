@@ -8,6 +8,7 @@ import Image5 from '@/public/Images/Balcony-Terrace/image1.jpg'
 import Image6 from '@/public/Images/Office-Interior/image1.jpg'
 import Image from 'next/image'
 import Head from 'next/head'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const portfolio = [
   {
@@ -49,29 +50,36 @@ function gallery() {
         <title>Our Showcase</title>
       </Head>
         <Header />
-        <div className='container'>
-          <h1 className='text-center uppercase my-5 text-3xl'>Awesome Portfolio</h1>
-          <div className='grid lg:grid-cols-3 xs:grid-cols-1 gap-6 my-4'>
-          {
-            portfolio.map(i=> (
-              <a href={`/gallery/${i.name}`} className="hover:mt-[-20px] transition-[0.5s]" key={i.id}>
-                <div 
-                    className='bg-[#eaeaea] text-center p-[20px] rounded-sm ' >
-                    <div>
-                        <Image
-                            src={i.img}
-                            alt="second"
-                            className='w-[100%] h-[300px] mb-4'
-                        />
-                    </div>
-                    <p className='text-[#333] text-2xl font-bold mb-4'>{i.name}</p>
-                    {/* <p className='text-[#444] text-sm'>{i.subHeading}</p> */}
-                </div>
-              </a>
-            ))
-          }
-          </div>
-        </div>
+        <AnimatePresence>
+          <motion.div 
+            initial={{opacity : 0, y : 15}}
+            animate={{opacity : 1, y : 0}}
+            exit={{opacity : 0, y : 15}}
+            transition={{ delay : 0.25}}
+            className='container'>
+            <h1 className='text-center uppercase my-5 text-3xl'>Awesome Portfolio</h1>
+            <div className='grid lg:grid-cols-3 xs:grid-cols-1 gap-6 my-4'>
+            {
+              portfolio.map(i=> (
+                <a href={`/gallery/${i.name}`} className="hover:mt-[-20px] transition-[0.5s]" key={i.id}>
+                  <div 
+                      className='bg-[#eaeaea] text-center p-[20px] rounded-sm ' >
+                      <div>
+                          <Image
+                              src={i.img}
+                              alt="second"
+                              className='w-[100%] h-[300px] mb-4'
+                          />
+                      </div>
+                      <p className='text-[#333] text-2xl font-bold mb-4'>{i.name}</p>
+                      {/* <p className='text-[#444] text-sm'>{i.subHeading}</p> */}
+                  </div>
+                </a>
+              ))
+            }
+            </div>
+          </motion.div>
+        </AnimatePresence>
     </div>
   )
 }
