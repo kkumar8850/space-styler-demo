@@ -1,43 +1,43 @@
 import React from 'react'
 import Header from '@/components/Header/Header'
-import Image1 from '@/public/Images/1.jpg'
-import Image2 from '@/public/Images/2.jpg'
-import Image3 from '@/public/Images/3.jpg'
-import Image4 from '@/public/Images/4.jpg'
-import Image5 from '@/public/Images/5.jpg'
-import Image6 from '@/public/Images/6.jpg'
+import Image1 from '@/public/Images/Living-Room/image1.jpg'
+import Image2 from '@/public/Images/Bedroom/image1.jpg'
+import Image3 from '@/public/Images/Kids-Room/image1.jpg'
+import Image4 from '@/public/Images/Bathroom/image1.jpg'
+import Image5 from '@/public/Images/Balcony-Terrace/image1.jpg'
+import Image6 from '@/public/Images/Office-Interior/image1.jpg'
 import Image from 'next/image'
 import Head from 'next/head'
 
 const portfolio = [
   {
     id : 0,
-    name : 'Living Room',
+    name : 'Living-Room',
     img : Image1
   },
   {
     id : 1,
-    name : 'Bed Room',
+    name : 'Bedroom',
     img : Image2
   },
   {
     id : 2,
-    name : 'Kids Room',
+    name : 'Kids-Room',
     img : Image3
   },
   {
     id : 3,
-    name : 'Bath Room',
+    name : 'Bathroom',
     img : Image4
   },
   {
     id : 4,
-    name : 'Balcony/Terrace',
+    name : 'Balcony-Terrace',
     img : Image5
   },
   {
     id : 5,
-    name : 'Office Interior',
+    name : 'Office-Interior',
     img : Image6
   },
 ]
