@@ -20,9 +20,9 @@ function ContactUs() {
           <Header active="contact-us" />
           <PageWrapper>
             <div className='container py-[30px]'>
-              <div className='grid lg:grid-cols-7 sm:grid-cols-1 gap-1'>
-                <div className='lg:col-start-1 lg:col-end-5 sm:col-start-1 sm:col-end-8'>
-                  <div className='p-[40px]'>
+              <div className='grid lg:grid-cols-7 sm:grid-cols-1 xs:grid-cols-1 gap-1'>
+                <div className='lg:col-span-4'>
+                  <div className=''>
                     <p className='text-3xl font-semibold text-center'>Do you have a query?</p>
                     <p className='text-lg mt-4 text-center'>Fill up the form and our team will get back to you within 24 hours.</p>
                     <ul className={`${styles.infoUl}`}>
@@ -47,7 +47,7 @@ function ContactUs() {
                     </ul>
                   </div>
                 </div>
-                <div className='lg:col-start-5 lg:col-end-8 sm:col-start-1 sm:col-end-8'>
+                <div className='lg:col-span-3'>
                   <div className={`${styles.contactForm} bg-primary`}>
                     <Formik
                       initialValues={{
