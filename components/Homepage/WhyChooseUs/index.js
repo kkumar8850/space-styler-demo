@@ -45,12 +45,12 @@ const anotherArray = [
         name : 'Leave the details to us',
         text : 'It all comes down to the details and our team are there to ensure all the finer points are taken care of, so you don’t need to worry about them, giving you peace of mind.'
     },
-    {
-        id : 8,
-        img : Image1,
-        name : 'Seamless solution',
-        text : 'From the beginning concept to the final completion, our creative team will look after your project from start to finish ensuring a seamless process of design, construction and decoration.'
-    },
+    // {
+    //     id : 8,
+    //     img : Image1,
+    //     name : 'Seamless solution',
+    //     text : 'From the beginning concept to the final completion, our creative team will look after your project from start to finish ensuring a seamless process of design, construction and decoration.'
+    // },
     {
         id : 8,
         img : Image1,

@@ -26,7 +26,7 @@ function Specialization() {
                                 />
                             </div>
                             <p className='text-[#333] text-2xl font-bold my-4'>Modular Kitchen</p>
-                            <p className='text-[#444] text-sm'>industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                            <p className='text-[#444] text-sm'>We offer a wide range of custom kitchen designs and solutions that are tailored to your unique needs and preferences.</p>
                         </div>
                         {/* <div className='text-center'>
                             <div className='h-[420px] lg:h-[330px] w-full lg:w-[50%] border-secondary border-2 mx-auto rounded-full pt-[30px]'>

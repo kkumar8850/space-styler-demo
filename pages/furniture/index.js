@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '@/components/Header/Header'
 import Image1 from '@/public/Images/bed-images/image1.jpg'
-import Image2 from '@/public/Images/bed-images/image2.jpg'
+import Image2 from '@/public/Images/sofa-images/image1.jpg'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -76,7 +76,7 @@ function index() {
                             exit={{opacity : 0, x : 150}}
                             transition={{ delay : 0.25}}
                             >
-                            <a href={`/furniture/bed`} className="hover:mt-[-20px] transition-[0.5s]">
+                            <a href={`/furniture/sofa`} className="hover:mt-[-20px] transition-[0.5s]">
                                 <div 
                                     className='bg-[#eaeaea] text-center p-[20px] rounded-sm ' >
                                     <div>
