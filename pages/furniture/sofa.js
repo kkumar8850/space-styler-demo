@@ -10,16 +10,13 @@ function sofa() {
         <Header />
         <div>
             <div 
-                className='h-[300px])'
+                className='h-[400px] bg-center bg-cover'
                 style={{
-                    backgroundImage : `url(/Images/sofa-images/image1.jpg)`,
-                    backgroundRepeat : 'no-repeat',
-                    backgroundSize : 'cover',
-                    backgroundPosition : 'center'
+                    backgroundImage : `url(/Images/sofa-images/image5.jpg)`,
                 }}
                 >
                 <div 
-                    className='container h-[300px] relative bg-[rgba(0,0,0,0.6)]'>
+                    className='container h-[400px] relative bg-[rgba(0,0,0,0.6)]'>
                     
                         <div
                         className='absolute bottom-[-30px]'>

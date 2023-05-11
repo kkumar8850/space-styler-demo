@@ -8,6 +8,7 @@ import { FaPhoneAlt, FaMailBulk, FaWhatsapp } from 'react-icons/fa'
 import { MdLocationOn } from 'react-icons/md'
 import styles from '../styles/contact.module.css'
 import PageWrapper from '@/components/PageWrapper/PageWrapper'
+import Footer from '@/components/Footer'
 
 function ContactUs() {
 
@@ -41,7 +42,8 @@ function ContactUs() {
                       <li className={styles.contactOuter}>
                         <div className={styles.contactInfo}>
                         <MdLocationOn className='mr-4'/>
-                        <p>test location faridabad</p>
+                        <p>Azad appartment, 
+                            I P extension, New Delhi</p>
                         </div>
                       </li>
                     </ul>
@@ -190,6 +192,7 @@ function ContactUs() {
             </div>
           </PageWrapper>
         </main>
+        <Footer />
     </div>
   )
 }

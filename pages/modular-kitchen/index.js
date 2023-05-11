@@ -20,7 +20,7 @@ function ModularKitchen() {
                     Modular Kitchen
             </h1>
             <div 
-                className='h-[70vh]' 
+                className="h-[70vh] bg-[url('/Images/2.jpg')]"
                 style={{
                     backgroundImage : `url(/Images/2.jpg)`,
                     backgroundRepeat: 'no-repeat',

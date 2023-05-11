@@ -1,7 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Logo from '../../public/Images/logonew.png'
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, FaLinkedin } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram, FaYoutube } from 'react-icons/fa'
+import Link from 'next/link'
 
 function Footer() {
   return (
@@ -20,11 +21,17 @@ function Footer() {
                 <div>
                     <div className="flex justify-evenly items-center">
                     <p>Follow us on :</p>
-                        <FaFacebookF />
-                        <FaInstagram />
-                        <FaTwitter />
-                        <FaYoutube />
-                        <FaLinkedin />
+                        <Link href="https://www.facebook.com/spacestylerPGK?mibextid=ZbWKwL" target='_blank'>
+                            <FaFacebookF />
+                        </Link>
+                        <Link href="https://www.instagram.com/spacestyler_interiordesign/" target="_blank">
+                            <FaInstagram />
+                        </Link>
+                        {/* <FaTwitter /> */}
+                        <Link href="https://youtube.com/@spacestyler-wl1ob" target="_blank">
+                            <FaYoutube />
+                        </Link>
+                        {/* <FaLinkedin /> */}
                     </div>
                 </div>
             </div>

@@ -10,16 +10,16 @@ function bed() {
         <Header />
         <div>
             <div 
-                className='h-[300px])'
+                className='h-[400px])'
                 style={{
-                    backgroundImage : `url(/Images/bed-images/image1.jpg)`,
+                    backgroundImage : `url(/Images/bed_123.jpg)`,
                     backgroundRepeat : 'no-repeat',
                     backgroundSize : 'cover',
                     backgroundPosition : 'center'
                 }}
                 >
                 <div 
-                    className='container h-[300px] relative bg-[rgba(0,0,0,0.6)]'>
+                    className='container h-[400px] relative bg-[rgba(0,0,0,0.6)]'>
                     
                         <div
                         className='absolute bottom-[-30px]'>

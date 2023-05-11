@@ -20,8 +20,8 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), {
 const slides = [
     {
         id : 0,
-        name : 'Tanya Sinclair ',
-        review : '“It was a great pleasure for me to deal with “Space styler” because of its distinguished credibility in delivering designs and coming through on their promises within the given time.”',
+        name : 'Mr & Mrs Kalim Khan',
+        review : `Home sweet home. This is the place to find happiness. If one doesn't find it here, one doesn't find it anywhere and to find this happiness Space Styler helped us to build our dream makeover house. The great involvement of the team was remarkable and appreciable. I'm glad I hired space styler for my home makeover.`,
         profession : 'UX Engineer',
         image : Image1
     },

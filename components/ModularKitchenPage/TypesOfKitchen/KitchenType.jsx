@@ -52,12 +52,9 @@ function KitchenType() {
             </div>
         </div>
         <div
-            className='h-[70vh] '
+            className={`h-[70vh] bg-no-repeat bg-contain bg-top lg:bg-cover lg:bg-center`}
             style={{
                 backgroundImage :  `url(${kitchenType.find(i=> i.selectedId === selected).imageId})`,
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition:'center',
-                backgroundSize : 'cover'
             }}
         >
             <div className='h-[inherit]'>

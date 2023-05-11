@@ -1,7 +1,12 @@
 import Image from 'next/image'
 import React from 'react'
 import Image1 from '@/public/Images/sofaImage.jpg'
-import { FaRegLightbulb, FaDollarSign,FaPeopleCarry, FaPeopleArrows} from 'react-icons/fa'
+import {BiRupee} from 'react-icons/bi'
+import { GrWorkshop } from 'react-icons/gr'
+import { GiMoneyStack } from 'react-icons/gi'
+import { TbListDetails } from 'react-icons/tb'
+import { MdOutlineDesignServices } from 'react-icons/md'
+import { FaRegLightbulb,FaPeopleCarry, FaPeopleArrows} from 'react-icons/fa'
 
 const contentArray = [
     {
@@ -12,7 +17,7 @@ const contentArray = [
     {
         id : 2,
         name : 'We never exceed your budget', 
-        icon : <FaDollarSign color="#22A39F" fontSize={40}/>
+        icon : <BiRupee color="#22A39F" fontSize={40}/>
     },
     {
         id : 3,
@@ -30,18 +35,21 @@ const anotherArray = [
     {
         id : 5,
         img : Image1,
+        icon : <MdOutlineDesignServices className='wyicon' color="#22A39F" fontSize={50} />,
         name : 'Well-considered design',
         text : 'Extensive combined knowledge and experience of our team ensure we have the nous to create innovative and stylish solutions for your home, workplace or holiday rental. Whatever the project, our job is to find the right solution.'
     },
     {
         id : 6,
         img : Image1,
+        icon : <GrWorkshop className='wyicon gricon' fontSize={50} style={{margin:  '0 auto', color : '#22A39F'}}/>,
         name : 'We create for you',
         text : 'We listen to our clients and create a personalised design solution that is tailored to you. We want you to love the end result and will work with you to ensure you are more than happy with the outcome.'
     },
     {
         id : 7,
         img : Image1,
+        icon : <TbListDetails className='wyicon' color="#22A39F" fontSize={50}/>,
         name : 'Leave the details to us',
         text : 'It all comes down to the details and our team are there to ensure all the finer points are taken care of, so you don’t need to worry about them, giving you peace of mind.'
     },
@@ -54,6 +62,7 @@ const anotherArray = [
     {
         id : 8,
         img : Image1,
+        icon : <GiMoneyStack className='wyicon' color="#22A39F" fontSize={50}/>,
         name : 'Value for your investment',
         text : 'By working with an experienced Interior Designer, you have the benefit of our industry knowledge, as well as that of our preferred and trusted suppliers and trades, helping you to avoid financial disappointment and giving you a finished project that will delight you.'
     },
@@ -63,7 +72,7 @@ function WhyChooseUs() {
   return (
     <div className='container py-[50px]'>
         <p className='text-secondary text-5xl font-medium text-left mb-2'>Why Choose Us</p>
-        <p className='mb-6 text-left text-xl w-[50%]'>Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!</p>
+        {/* <p className='mb-6 text-left text-xl w-[50%]'>Free Download Furni for furniture ecommerce website template. You can also use this for interior design websites. Visit Untree.co now!</p> */}
         <div className='grid lg:grid-cols-4 xs:grid-cols-1 gap-6'>
             {
                 contentArray.map(i=> (
@@ -86,13 +95,16 @@ function WhyChooseUs() {
                     <div 
                         className='bg-[#eaeaea] text-center p-[20px] rounded-sm ' key={i.id}>
                         <div 
-                        
+                            className="text-center py-6"
                         >
-                            <Image
+                            {
+                                i.icon
+                            }
+                            {/* <Image
                                 src={i.img}
                                 alt="second"
                                 className='w-[100%] h-[150px] mb-4'
-                            />
+                            /> */}
                         </div>
                         <p className='text-[#333] text-xl font-semibold mb-4'>{i.name}</p>
                         <p className='text-[#444] text-sm'>{i.text}</p>
