@@ -94,6 +94,8 @@ function Testimonials() {
                         autoplay
                         dots={false}
                         responsive={Responsive}
+                        autoplayTimeout={8000}
+                        smartSpeed={1000}
                     >
                         {
                             slides.map((s, index)=> (

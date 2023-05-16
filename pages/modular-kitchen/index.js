@@ -14,7 +14,7 @@ function ModularKitchen() {
             <title>Modular Kitchen</title>
         </Head>
         <Header/>
-        <div className='py-[20px]'>
+        <div className='pt-[20px]'>
             <h1 
                 className='text-center text-secondary text-3xl font-semibold my-[20px]'>
                     Modular Kitchen
@@ -29,9 +29,14 @@ function ModularKitchen() {
                 }}>
             </div>
         </div>
-        <div className='container py-[20px] text-xl'>
-            <p>Alongside a team of experts offering support and design advice from the first click through to white-glove delivery and installation, LuxDeco also provides an interior design studio service with expertise ranging from full-service residential and hospitality projects to product sourcing and bespoke furniture design, using best-in-class digital technology and industry tools.
-            Alongside a team of experts offering support and design advice from the first click through to white-glove delivery and installation, LuxDeco also provides an interior design studio service with expertise ranging from full-service residential and hospitality projects to product sourcing and bespoke furniture design, using best-in-class digital technology and industry tools.
+        <div className='container py-[30px]'>
+            <h1 className='text-3xl mb-2'>“The Kitchen is the heart of the home.”</h1>
+            <p className='text-xl mb-2'>
+            {`At Space Styler, kitchen design is the process of combining layout, surfaces and design details to form a cooking space that’s easy to use and fun to cook and socialize in.
+We master in the art of creating a work triangle {between your refrigerator, sink and cook top} providing adequate storage and ensuring a sizeable clear surface for food preparation.`}
+            </p>
+            <p className='text-xl'>
+            Awe-inspiring designs, gorgeous countertops, unique backsplashes, statement lighting all coming your way with Space Styler kitchen.
             </p>
         </div>
         <KitchenType />

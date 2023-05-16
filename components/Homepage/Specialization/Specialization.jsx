@@ -10,8 +10,6 @@ function Specialization() {
                 <div className='grid lg:grid-cols-3 sm:grid-cols-1 gap-4'>
                     <div>
                     <p className='text-secondary text-3xl font-semibold mb-10'>More about us</p>
-                    {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> */}
-                    {/* <a href="/furniture" className='border-2 border-secondary text-secondary px-5 py-2 mt-5 inline-block hover:bg-secondary hover:text-white'>Read more</a> */}
                     </div>
                     <a href='/modular-kitchen' className='h-[100%]'>
                         <div 
@@ -28,17 +26,6 @@ function Specialization() {
                             <p className='text-[#333] text-2xl font-bold my-4'>Modular Kitchen</p>
                             <p className='text-[#444] text-sm'>We offer a wide range of custom kitchen designs and solutions that are tailored to your unique needs and preferences.</p>
                         </div>
-                        {/* <div className='text-center'>
-                            <div className='h-[420px] lg:h-[330px] w-full lg:w-[50%] border-secondary border-2 mx-auto rounded-full pt-[30px]'>
-                                <Image
-                                    src={BedImage}
-                                    alt="bed"
-                                    height={500}
-                                    width={500}
-                                />
-                            </div>
-                            <h1 className='text-3xl text-secondary mt-[30px]'>Bed</h1>
-                        </div> */}
                     </a>
                     <a href="/furniture">
                     <div 
@@ -53,19 +40,10 @@ function Specialization() {
                                 />
                             </div>
                             <p className='text-[#333] text-2xl font-bold my-4'>Furniture</p>
-                            <p className='text-[#444] text-sm'>industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+                            <p className='text-[#444] text-sm'>
+                            Elevate your living space with our furniture design services. Experience style, comfort and quality with Space Styler bespoke styling furnitures.
+                            </p>
                         </div>
-                        {/* <div className='text-center'>
-                            <div className='h-[420px] lg:h-[330px] w-full lg:w-[50%] bg-primary mx-auto rounded-full pt-[30px]'>
-                                <Image
-                                    src={SofaImage}
-                                    alt="bed"
-                                    height={500}
-                                    width={500}
-                                />
-                            </div>
-                            <h1 className='text-3xl text-secondary mt-[30px]'>Sofa</h1>
-                        </div> */}
                     </a>
                 </div>
             </div>
