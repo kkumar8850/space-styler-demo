@@ -79,7 +79,7 @@ function index() {
                                             className='w-[100%] h-[300px] mb-4'
                                         />
                                     </div>
-                                    <p className='text-[#333] text-2xl font-bold mb-4'>Beds</p>
+                                    <p className='text-[#333] text-2xl font-bold mb-4'>Bed</p>
                                 </div>
                             </a>
                         </motion.div>
