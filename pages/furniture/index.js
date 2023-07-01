@@ -4,10 +4,24 @@ import Image1 from '@/public/Images/bed-images/image1.jpg'
 import Image2 from '@/public/Images/sofa-images/image1.jpg'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
+import Head from 'next/head'
 
 function index() {
   return (
         <div>
+            <Head>
+                <title>Furniture</title>
+                <meta name="description" content="Welcome to our Furniture Collection, where artistry meets functionality to transform your living spaces. Explore a curated selection of meticulously crafted furniture pieces that blend exquisite design, superior craftsmanship, and exceptional quality to elevate your home's style and comfort." />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href="/favicon.ico" />
+                <meta name="keywords" content="Furniture collection, Exquisite design, Personal style, Handcrafted furniture, Fine materials, Statement furniture, Thoughtful craftsmanship, Bed, Sofa" />
+                <meta name="author" content="Spacestyler" />
+                <meta property="og:title" content="Space Styler | Transforming Spaces In Style" />
+                <meta property="og:description" content="Welcome to our Furniture Collection, where artistry meets functionality to transform your living spaces. Explore a curated selection of meticulously crafted furniture pieces that blend exquisite design, superior craftsmanship, and exceptional quality to elevate your home's style and comfort." /> 
+                <meta property="og:url" content="http://www.spacestyler.in" />
+                <meta property="og:type" content="website" />
+                <meta name="robots" content="index, follow" />
+            </Head>
             <Header />
             <div 
                 className='h-[500px] relative'
@@ -65,7 +79,7 @@ function index() {
                                             className='w-[100%] h-[300px] mb-4'
                                         />
                                     </div>
-                                    <p className='text-[#333] text-2xl font-bold mb-4'>Bed</p>
+                                    <p className='text-[#333] text-2xl font-bold mb-4'>Beds</p>
                                 </div>
                             </a>
                         </motion.div>
