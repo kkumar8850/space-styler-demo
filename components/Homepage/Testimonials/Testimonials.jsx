@@ -115,14 +115,6 @@ function Testimonials() {
                         }
                     </OwlCarousel>
                 </div>
-                {/* <div className="slider__buttons">
-                    <div className="slider__button slider__button--prev">
-                        <MdKeyboardArrowLeft color="#000" fontSize={30}/>
-                    </div>
-                    <div className="slider__button slider__button--next">
-                        <MdKeyboardArrowRight color="#000" fontSize={30}/>
-                    </div>  
-                </div> */}
             </div>
             
         </section>
