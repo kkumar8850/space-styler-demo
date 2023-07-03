@@ -6,7 +6,7 @@ import Image0 from '@/public/Images/testimonials/testimonial0.jpeg'
 import Image1 from '@/public/Images/testimonials/testimonial1.jpeg'
 import Image2 from '@/public/Images/testimonials/testimonial2.jpeg'
 import Image3 from '@/public/Images/testimonials/testimonial3.jpeg'
-import Image4 from '@/public/Images/testimonials/testimonial4.jpeg'
+import Image6 from '@/public/Images/testimonials/testimonial6.jpeg'
 import quoteImage from '@/public/Images/pattern-quotes.svg'
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -40,7 +40,7 @@ const slides = [
         name : 'Neha Rawal',
         review : '“We chose to work with “Space Styler” as they really understood what we were after and we loved their enthusiasm towards our project. Their team and team work were really impressive and left behind a mark that is our “beautiful home”.”',
         profession : 'UX Engineer',
-        image : Image4
+        image : Image6
     },
     {
         id : 3,
