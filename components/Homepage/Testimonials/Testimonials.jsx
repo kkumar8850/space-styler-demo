@@ -91,24 +91,24 @@ function Testimonials() {
                             slides.map((s, index)=> (
                                 <div className={`item slider__slide slider__slide--${index + 1}`} key={s.id}>
                                     <figure className="testimonial slider__slide-content">
-                                    <blockquote className="testimonial__text">
-                                        <Image className="testimonial__quotation-marks" width="100" height="100" src={quoteImage} alt="quotation marks" />
-                                        <p className="testimonial__quote text-secondary">
-                                            {s.review}
-                                        </p>
-                                        <cite className="testimonial__cite">
-                                            {s.name}
-                                        </cite>
-                                    </blockquote>
-                                    <div className="testimonial__img">
-                                        <Image 
-                                            className="testimonial__photo" 
-                                            width="80" 
-                                            height="80" 
-                                            src={s.image} 
-                                            alt={s.name} 
-                                            />
-                                    </div>
+                                        <blockquote className="testimonial__text">
+                                            <Image className="testimonial__quotation-marks" width="100" height="100" src={quoteImage} alt="quotation marks" />
+                                            <p className="testimonial__quote text-secondary">
+                                                {s.review}
+                                            </p>
+                                            <cite className="testimonial__cite">
+                                                {s.name}
+                                            </cite>
+                                        </blockquote>
+                                        <div className="testimonial__img">
+                                            <Image 
+                                                className="testimonial__photo" 
+                                                width="80" 
+                                                height="80" 
+                                                src={s.image} 
+                                                alt={s.name} 
+                                                />
+                                        </div>
                                     </figure>
                                 </div>
                             ))
