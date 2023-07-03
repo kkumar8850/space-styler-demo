@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
+import { portfolioSeo } from '@/helper/seoHelper'
 
 const arr = [
     {
@@ -40,11 +42,24 @@ const arr = [
     },
 ]
 
-function id() {
+function id({title, description, keywords}) {
     const router = useRouter()
     const { id } = router.query || 'Living Room'
   return (
     <div>
+        <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="keywords" content={keywords.toString()} />
+        <meta name="author" content="Spacestyler" />
+        <meta property="og:title" content="Space Styler | Transforming Spaces In Style" />
+        <meta property="og:description" content={description} /> 
+        <meta property="og:url" content="http://www.spacestyler.in" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Head>
         <Header />
         {
             id && (
@@ -83,8 +98,6 @@ function id() {
                                         </AnimatePresence>
                                     <div>
                                         <h1 className='text-3xl ml-[30px] font-medium'>{id?.replaceAll('-', ' ')}</h1>
-                                        {/* <p className='text-xl ml-[30px] mt-4'> 
-            Every interiors project and every client is unique so our approach can be flexible to suit your needs.</p> */}
                                     </div>
                                 </div>
                             </div>
@@ -114,7 +127,7 @@ function id() {
                                             <Image
                                                 key={a.id}
                                                 src={`/Images/${id}/image${index + 1}.jpg`}
-                                                alt={a.name}
+                                                alt={`${id?.replaceAll('-', ' ')} Design`}
                                                 fill
                                                 sizes="(max-width: 768px) 100vw,
                                                         (max-width: 1200px) 50vw,
@@ -132,5 +145,17 @@ function id() {
     </div>
   )
 }
+
+export async function getServerSideProps({query}) {
+    const { id } = query
+    const findedData = portfolioSeo.find(i=> i.id === id)
+    return {
+      props: {
+        title : id.replaceAll('-', ' '),
+        description : findedData.description,
+        keywords : findedData.keywords
+      },
+    };
+  }
 
 export default id

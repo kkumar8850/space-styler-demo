@@ -3,10 +3,24 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Header from '@/components/Header/Header'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 
 function sofa() {
   return (
     <div>
+        <Head>
+            <title>Sofa | Furniture</title>
+            <meta name="description" content="Welcome to our Sofa Collection, where comfort meets style to create inviting and luxurious living spaces. Explore a curated selection of meticulously crafted sofas that blend exquisite design, superior craftsmanship, and exceptional comfort to transform your home into a haven of relaxation and elegance." />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="keywords" content="Sofa collection, Comfort and style, Inviting living spaces, Exquisite design, Exceptional comfort, Contemporary sofas, Modern designs, Durability and support, Statement of style, Spacious sectionals, Plush cushioning" />
+            <meta name="author" content="Spacestyler" />
+            <meta property="og:title" content="Space Styler | Transforming Spaces In Style" />
+            <meta property="og:description" content="Welcome to our Sofa Collection, where comfort meets style to create inviting and luxurious living spaces. Explore a curated selection of meticulously crafted sofas that blend exquisite design, superior craftsmanship, and exceptional comfort to transform your home into a haven of relaxation and elegance." /> 
+            <meta property="og:url" content="http://www.spacestyler.in" />
+            <meta property="og:type" content="website" />
+            <meta name="robots" content="index, follow" />
+        </Head>
         <Header />
         <div>
             <div 

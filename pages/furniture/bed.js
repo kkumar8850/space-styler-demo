@@ -3,10 +3,24 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Header from '@/components/Header/Header'
 import Image from 'next/image'
 import Link from 'next/link'
+import Head from 'next/head'
 
 function bed() {
   return (
     <div>
+        <Head>
+            <title>Bed | Furniture</title>
+            <meta name="description" content="Welcome to our Bed Collection, where comfort meets style for a restful and rejuvenating sleep experience. Explore a curated selection of meticulously crafted beds that blend exquisite design, superior craftsmanship, and exceptional comfort to create the perfect centerpiece for your bedroom sanctuary." />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="keywords" content="Bed collection, Comfort and style, Restful sleep experience, Exquisite design, Exceptional comfort, Contemporary beds, Modern designs, Durability and support, Sleek platform beds, Statement of style, Elegance in the bedroom, Cozy haven of tranquility" />
+            <meta name="author" content="Spacestyler" />
+            <meta property="og:title" content="Space Styler | Transforming Spaces In Style" />
+            <meta property="og:description" content="Welcome to our Bed Collection, where comfort meets style for a restful and rejuvenating sleep experience. Explore a curated selection of meticulously crafted beds that blend exquisite design, superior craftsmanship, and exceptional comfort to create the perfect centerpiece for your bedroom sanctuary." /> 
+            <meta property="og:url" content="http://www.spacestyler.in" />
+            <meta property="og:type" content="website" />
+            <meta name="robots" content="index, follow" />
+        </Head>
         <Header />
         <div>
             <div 

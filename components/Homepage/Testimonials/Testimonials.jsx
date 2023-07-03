@@ -2,8 +2,11 @@ import Image from 'next/image'
 import React from 'react'
 import dynamic from 'next/dynamic'
 // import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
-import Image1 from '@/public/Images/image-tanya.jpg'
-import Image2 from '@/public/Images/image-john.jpg'
+import Image0 from '@/public/Images/testimonials/testimonial0.jpeg'
+import Image1 from '@/public/Images/testimonials/testimonial1.jpeg'
+import Image2 from '@/public/Images/testimonials/testimonial2.jpeg'
+import Image3 from '@/public/Images/testimonials/testimonial3.jpeg'
+import Image4 from '@/public/Images/testimonials/testimonial4.jpeg'
 import quoteImage from '@/public/Images/pattern-quotes.svg'
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -23,49 +26,35 @@ const slides = [
         name : 'Mr & Mrs Kalim Khan',
         review : `Home sweet home. This is the place to find happiness. If one doesn't find it here, one doesn't find it anywhere and to find this happiness Space Styler helped us to build our dream makeover house. The great involvement of the team was remarkable and appreciable. I'm glad I hired space styler for my home makeover.`,
         profession : 'UX Engineer',
-        image : Image1
+        image : Image0
     },
     {
         id : 1,
-        name : 'Tanya Sinclair ',
+        name : 'Neha Bhardwaj ',
         review : '“Working with space styler was a great experience.” Space Styler “combined my ideas and vision with their expertise and experience to come up with a beautifully designed space. I am extremely happy with the service provided and with the way our space turned out. ”',
         profession : 'UX Engineer',
-        image : Image2
+        image : Image1
     },
     {
         id : 2,
-        name : 'Tanya Sinclair ',
+        name : 'Neha Rawal',
         review : '“We chose to work with “Space Styler” as they really understood what we were after and we loved their enthusiasm towards our project. Their team and team work were really impressive and left behind a mark that is our “beautiful home”.”',
         profession : 'UX Engineer',
-        image : Image1
+        image : Image4
     },
     {
         id : 3,
-        name : 'Tanya Sinclair ',
-        review : '“We trusted them with decision that we have not regretted at all and now have a home with the finish that we never thought was possible or that we would own. The best part was that in such an industry getting the job done within the allocated budget is hard to do on the contrary “Space Styler” made it possible.”',
+        name : 'Ankit Vats',
+        review : '““Having finally got of a flat of our own, we wanted to convert it into a home”. They understood our requirements and the budget and delivered a simple minimalistic house. The journey was smooth and they incorporated our ideas to their design. We are happy with the timely and flawless execution of the project. We often get compliments on the interiors and a lot of credit goes to “Space Styler” and team.”',
         profession : 'UX Engineer',
-        image : Image2
+        image : Image3
     },
     {
         id : 4,
-        name : 'Tanya Sinclair ',
+        name : 'Vibhor Aggarwal ',
         review : '“I wanted to take a moment to thank you for the amazing work you did on my home. Your attention to detail and ability to bring my vision to life was great. Your expertise and professionalism made the entire project seamless and enjoyable. I am thrilled with the outcome and would highly recommend your services to anyone looking for a talented and passionate interior designer.”',
         profession : 'UX Engineer',
-        image : Image1
-    },
-    {
-        id : 5,
-        name : 'Tanya Sinclair ',
-        review : '“Home sweet home. This is the place to find happiness, if one doesn’t find it here, one doesn’t find it anywhere and to find this happiness “Space styler” helped us to build our dream makeover house. The great involvement of team was remarkable and appreciable. I am glad I made her in charge of my home makeover.”',
-        profession : 'UX Engineer',
         image : Image2
-    },
-    {
-        id : 6,
-        name : 'Tanya Sinclair ',
-        review : '““Having finally got of a flat of our own, we wanted to convert it into a home”. They understood our requirements and the budget and delivered a simple minimalistic house. The journey was smooth and they incorporated our ideas to their design. We are happy with the timely and flawless execution of the project. We often get compliments on the interiors and a lot of credit goes to “Space Styler” and team.”',
-        profession : 'UX Engineer',
-        image : Image1
     },
 ]
 

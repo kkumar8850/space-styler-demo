@@ -1,21 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
-import Link from 'next/link'
 import {Formik} from 'formik'
 import * as Yup from 'yup'
 import Header from '@/components/Header/Header'
-import { FaPhoneAlt, FaMailBulk, FaWhatsapp } from 'react-icons/fa'
+import { FaPhoneAlt, FaMailBulk } from 'react-icons/fa'
 import { MdLocationOn } from 'react-icons/md'
 import styles from '../styles/contact.module.css'
 import PageWrapper from '@/components/PageWrapper/PageWrapper'
 import Footer from '@/components/Footer'
+import axios from 'axios'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const phoneRegex = RegExp(
+  /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
+);
 
 function ContactUs() {
-
+  const [loading, setLoading] = useState(false)
   return (
     <div>
         <Head>
           <title>Contact Us</title>
+            <meta name="description" content="We value your feedback, inquiries, and the opportunity to assist you. Please feel free to reach out to us using the contact information provided below or by filling out the contact form. We are here to answer your questions, provide assistance, and ensure that your experience with us is exceptional." />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="keywords" content="Contact information, Get in touch, Reach out, Contact details, Contact form, Inquiry, Contact us form, Query, Service inquiry" />
+            <meta name="author" content="Spacestyler" />
+            <meta property="og:title" content="Space Styler | Transforming Spaces In Style" />
+            <meta property="og:description" content="We value your feedback, inquiries, and the opportunity to assist you. Please feel free to reach out to us using the contact information provided below or by filling out the contact form. We are here to answer your questions, provide assistance, and ensure that your experience with us is exceptional." /> 
+            <meta property="og:url" content="http://www.spacestyler.in" />
+            <meta property="og:type" content="website" />
+            <meta name="robots" content="index, follow" />
         </Head>
         <main>
           <Header active="contact-us" />
@@ -62,26 +78,40 @@ function ContactUs() {
                         Yup.object({
                           fullName : Yup.string().required('Required Field'),
                           email : Yup.string().required('Required Field'),
-                          phone : Yup.string().required('Required Field'),
+                          phone : Yup.string().matches(phoneRegex, "Invalid phone").required('Required Field'),
                           message : Yup.string().required('Required Field'),
                         })
                       }
-                      onSubmit={async (values, { setSubmitting}) => {
+                      onSubmit={async (values, { setSubmitting, resetForm}) => {
                         const data = {
                           name : values.fullName, email: values.email, phone : values.phone, message : values.message
                         }
-                        setSubmitting(true)
+                        setLoading(true)
                         const requestOptions = {
                           method : 'POST',
                           header : {
                             'Accept': 'application/json',
                             'Content-Type': 'application/json'
                           },
-                          body : JSON.stringify(data)
+                          url : '/api/contact',
+                          data
                         }
-                        const response = await fetch('/api/contact', requestOptions)
-                        const result = await response.json()
-                        console.log('result', result)
+                        axios(requestOptions)
+                        .then(()=> {
+                          resetForm()
+                          toast('You query has been submitted successfully', {
+                            autoClose : 5000,
+                            type : 'success'
+                          })
+                          setLoading(false)
+                        })
+                        .catch(error=> {
+                          setLoading(false)
+                          toast('Some error occured, please try after some time.', {
+                            autoClose : 5000,
+                            type : 'error'
+                          })
+                        })
                       }}
                     >
                     {({
@@ -130,7 +160,7 @@ function ContactUs() {
                           <formgroup className={styles.formgroup}>
                             {/* <label htmlFor='phone' className={styles.label}>Phone Number</label> */}
                             <input
-                              type="text"
+                              type="number"
                               name="phone"
                               placeholder='Enter Phone Number'
                               className={styles.input}
@@ -160,9 +190,10 @@ function ContactUs() {
                           </div>
                         </div>
                         <div className='lg:w-[50%] sm:w-[100%] mx-auto'>
-                          <button className={styles.submitButton} type="submit">
+                          <button 
+                            className={loading ? styles.loadingButton : styles.submitButton} disabled={loading} type="submit">
                             {
-                              isSubmitting
+                              loading
                               ?
                               "Submitting Data"
                               :
@@ -170,19 +201,6 @@ function ContactUs() {
                             }
                           </button>
                         </div>
-                        {/* <div className='my-4 text-center relative h-[30px]'>
-                          <hr className={styles.hr}/>
-                          <p className={styles.dividerText}>or</p>
-                        </div> */}
-                        {/* <div className='lg:w-[50%] sm:w-[100%] mx-auto mt-4'>
-                          <Link 
-                            href="https://wa.me/+917532098680"
-                            target="_blank"
-                            className={styles.whatsappChat}>
-                              <FaWhatsapp className='mr-[10px] text-2xl'/>
-                              Chat instantly on whatsapp
-                          </Link>
-                        </div> */}
                       </form>
                     )}
                     </Formik>
@@ -192,6 +210,7 @@ function ContactUs() {
             </div>
           </PageWrapper>
         </main>
+        <ToastContainer />
         <Footer />
     </div>
   )

@@ -44,6 +44,20 @@
     color : #fff
 }
 
+.loadingButton{
+    text-align: center;
+    border: 2px solid #22A39F;
+    width : 100%;
+    display: block;
+    padding : 10px 15px;
+    border-radius : 25px;
+    color : '#fff';
+    background-color : #1b4c4a;
+    font-size : 16px;
+    color : #fff;
+    cursor : no-drop;
+}
+
 .infoUl {
     display: block;
     margin-top: 40px;

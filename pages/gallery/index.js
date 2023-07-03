@@ -47,7 +47,17 @@ function gallery() {
   return (
     <div>
       <Head>
-        <title>Our Showcase</title>
+        <title>Our Portfolio</title>
+        <meta name="description" content="Welcome to our Portfolio page, where we showcase a curated collection of our finest interior design projects. Immerse yourself in a visual journey through stunning spaces that embody our commitment to creativity, craftsmanship, and attention to detail." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="keywords" content="Interior design portfolio, Design showcase, Creative projects, Remarkable interiors, Versatile designs, Bringing visions to life" />
+        <meta name="author" content="Spacestyler" />
+        <meta property="og:title" content="Space Styler | Transforming Spaces In Style" />
+        <meta property="og:description" content="Welcome to our Portfolio page, where we showcase a curated collection of our finest interior design projects. Immerse yourself in a visual journey through stunning spaces that embody our commitment to creativity, craftsmanship, and attention to detail." /> 
+        <meta property="og:url" content="http://www.spacestyler.in" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
       </Head>
         <Header />
         <AnimatePresence>
@@ -71,7 +81,7 @@ function gallery() {
                               className='w-[100%] h-[300px] mb-4'
                           />
                       </div>
-                      <p className='text-[#333] text-2xl font-bold mb-4'>{i.name}</p>
+                      <p className='text-[#333] text-2xl font-bold mb-4'>{i.name.replaceAll('-', ' ')}</p>
                       {/* <p className='text-[#444] text-sm'>{i.subHeading}</p> */}
                   </div>
                 </a>

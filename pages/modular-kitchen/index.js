@@ -12,6 +12,16 @@ function ModularKitchen() {
     <div>
         <Head>
             <title>Modular Kitchen</title>
+            <meta name="description" content="Welcome to our Modular Kitchen Showcase, where style, functionality, and innovation come together to redefine the heart of your home. Explore a collection of meticulously crafted modular kitchens that blend seamless design, intelligent storage solutions, and high-quality materials to create culinary spaces that inspire creativity and elevate everyday cooking experiences." />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" href="/favicon.ico" />
+            <meta name="keywords" content="Modular kitchen design, Modular kitchen showcase, Style and functionality, Seamless design, Intelligent storage solutions, Heart of the home, Luxurious kitchens, Versatile modular units, Seamless cabinetry, Family-friendly kitchens, U Shape Kitchen, L Shape Kitchen, Parallel Kitchen, Straight Kitchen, Island Kitchen" />
+            <meta name="author" content="Spacestyler" />
+            <meta property="og:title" content="Space Styler | Transforming Spaces In Style" />
+            <meta property="og:description" content="Welcome to our Modular Kitchen Showcase, where style, functionality, and innovation come together to redefine the heart of your home. Explore a collection of meticulously crafted modular kitchens that blend seamless design, intelligent storage solutions, and high-quality materials to create culinary spaces that inspire creativity and elevate everyday cooking experiences." /> 
+            <meta property="og:url" content="http://www.spacestyler.in" />
+            <meta property="og:type" content="website" />
+            <meta name="robots" content="index, follow" />
         </Head>
         <Header/>
         <div className='pt-[20px]'>

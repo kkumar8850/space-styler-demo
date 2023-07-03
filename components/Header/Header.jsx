@@ -52,12 +52,16 @@ function Header() {
         <div>
             <div className='container bg-primary text-white py-4 fixed z-[999] w-[100%]'>
                 <div className='px-[20px] flex items-center justify-between'>
-                    <Image
-                        src="/Images/logonew.png"
-                        height={100}
-                        width={200}
-                        alt='logo'
-                    />
+                    <Link
+                        href="/"
+                    >
+                        <Image
+                            src="/Images/logo.png"
+                            height={100}
+                            width={200}
+                            alt='logo'
+                        />
+                    </Link>
                     <div className='flex items-center'>
                         <ul className='hidden lg:block xl:block md:hidden'>
                             {
