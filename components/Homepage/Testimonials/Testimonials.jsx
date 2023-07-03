@@ -101,7 +101,13 @@ function Testimonials() {
                                         </cite>
                                     </blockquote>
                                     <div className="testimonial__img">
-                                        <Image className="testimonial__photo" width="80" height="80" src={s.image} alt={s.name} />
+                                        <Image 
+                                            className="testimonial__photo" 
+                                            width="80" 
+                                            height="80" 
+                                            src={s.image} 
+                                            alt={s.name} 
+                                            />
                                     </div>
                                     </figure>
                                 </div>
