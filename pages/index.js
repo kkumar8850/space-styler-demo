@@ -8,7 +8,7 @@ import IntroVideo from '@/components/Homepage/IntroVideo'
 import AboutUs from '@/components/Homepage/Aboutus'
 import Testimonials from '@/components/Homepage/Testimonials/Testimonials'
 import Specialization from '@/components/Homepage/Specialization/Specialization'
-import Image from 'next/image'
+import Script from 'next/script'
 
 export default function Home() {
   
@@ -28,6 +28,16 @@ export default function Home() {
         <meta name="robots" content="index, follow" />
       </Head>
       <main style={{position : 'relative'}}>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-XN7ZT9FHH8" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)}
+          gtag('js', new Date());
+
+          gtag('config', 'G-XN7ZT9FHH8');
+          `}
+        </Script>
         <Header active="home"/>
         <IntroVideo />
         <PageWrapper>
