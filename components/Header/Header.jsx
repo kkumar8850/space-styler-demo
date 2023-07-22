@@ -44,10 +44,6 @@ function Header() {
         setIsActive(!isActive)
     }
 
-    useEffect(()=>{
-        setTheme('dark')
-    },[])
-
     return (
         <div>
             <div className='container bg-primary text-white py-4 fixed z-[999] w-[100%]'>
@@ -72,7 +68,7 @@ function Header() {
                                                 scale : 1.1
                                             }}
                                         >
-                                            <Link href={l.href} className={`text-secondary px-6 py-1 ${path === l.href ? styles.active : styles.nav}`}>
+                                            <Link href={l.href} className={`text-secondary md:px-2 lg:px-2 py-1 ${path === l.href ? styles.active : styles.nav}`}>
                                                 {l.name}
                                             </Link>
                                         </motion.div>

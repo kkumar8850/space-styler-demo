@@ -80,7 +80,7 @@ function Testimonials() {
                     <OwlCarousel
                         loop
                         nav
-                        autoplay
+                        // autoplay
                         dots={false}
                         responsive={Responsive}
                         autoplayTimeout={15000}
@@ -93,6 +93,7 @@ function Testimonials() {
                                     <figure className="testimonial slider__slide-content">
                                         <blockquote className="testimonial__text">
                                             <Image className="testimonial__quotation-marks" width="100" height="100" src={quoteImage} alt="quotation marks" />
+                                            
                                             <p className="testimonial__quote text-secondary">
                                                 {s.review}
                                             </p>

@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
       }
       </style>
       <ErrorBoundary>
-        <ThemeProvider attribute='class' enableSystem={false} >
+        <ThemeProvider attribute='class' enableSystem={false} forcedTheme='dark'>
           <AnimatePresence mode="wait" initial={false}>
             <Component {...pageProps} />
             <div style={{position : 'fixed', top: '85vh', zIndex : 888, left : '50px'}}>
